@@ -225,7 +225,8 @@ li{
         text-align: center;
     }
     .puntos h6{
-        font-size: 10px;
+        font-size: 12px;
+        margin: 0;
     }
     li{
         font-size: 20px;
