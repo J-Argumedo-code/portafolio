@@ -4,6 +4,9 @@
 
 El proyecto consiste en un portafolio recopilando información acerca de mi perfil profesional incluyendo secciones como mis objetivos, tecnologias que manejo, educación, idiomas, intereses, proyectos realizados, etc.
 
+![Portfolio](./resources/Portafolio.png)
+
+
 ## Tecnologias utilizadas
 
 - [ ] HTML5
