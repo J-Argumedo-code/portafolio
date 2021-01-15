@@ -226,7 +226,8 @@ li{
     }
     .puntos h6{
         font-size: 11px;
-        margin: 1px;
+        margin-bottom: 3px;
+        margin-right: 5px;
     }
     li{
         font-size: 20px;
