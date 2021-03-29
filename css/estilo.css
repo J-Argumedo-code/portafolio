@@ -5,19 +5,18 @@
 }
 
 html::-webkit-scrollbar {
-    width: 14px;
-    height: 14px;
+    width: 10px;
 }
 html::-webkit-scrollbar-thumb {
     background: rgba(255, 152, 84, 0.884);
-    border-radius: 15px;
-}
-html::-webkit-scrollbar-track {
-    background: #ffffff;
+    border-radius: 10px;
 }
 
-header{
+.header{
     height: 100vh;
+    transform: translateY(-20%);
+    opacity: 0;
+    transition: 1s;
     background-color: white;
 
     display: flex;
@@ -25,7 +24,8 @@ header{
     align-items: center;
     justify-content: space-evenly;
 }
-header article{
+
+.header article{
     text-align: center;
 }
 h1{
@@ -33,24 +33,21 @@ h1{
     font-size: 25px;
     text-align: center;
 }
-
+.header .icon{
+    width: 28px;
+    height: 28px;
+}
 .myimg{
     width: 160px;
     height: 160px;
     border-radius: 50%;
 }
-header img{
-    width: 28px;
-    height: 28px;
-}
-
-header h5{
+.header h5{
     margin-top: 10px;
     font-size: 18px;
 }
 
-
-section{
+.main-section{
     padding-left: 50px !important;
     background: linear-gradient(120deg, #ff8843, #8db7ff);
     background-size: 150%;
@@ -65,7 +62,7 @@ section{
     100%{background-position: 0% 150%;}
 }
 
-section h3{
+.main-section h3{
     margin-top: 40px;
     font-weight: bold;
 }
@@ -81,17 +78,15 @@ p{
     justify-content: space-around;
 }
 
-section img{
+.tecno-img{
     width: 100px;
     height: 100px;
     transition: all 1s;
 }
-section .tecnologias img:hover{
-    width: 116px;
-    height: 116px;
-    margin: -8px;
+.tecno-img:hover{
+    transform: scale(1.15);
 }
-section .tecnologias h4{
+.main-section .tecnologias h4{
     font-size: 18px;
     text-align: center;
 }
@@ -124,7 +119,10 @@ section .tecnologias h4{
     align-items: center;
     justify-content: center;
 }
-
+.img-edu{
+    width: 140px;
+    height: 140px;
+}
 .edu p{
     margin-left: 10px;
 }
@@ -149,6 +147,10 @@ section .tecnologias h4{
     flex-direction: column;
 }
 
+.imagenes{
+    overflow-x: hidden;
+}
+
 .proyectos img{
     margin: 20px;
     border: none;
@@ -164,6 +166,13 @@ section .tecnologias h4{
     width: 210px;
     height: 120px;
 }
+
+.imagenes{
+    opacity: 0;
+    transform: translate(-4%);
+    transition: .5s;
+}
+
 .trivia{
     width: 140px;
     height: 140px;
@@ -197,18 +206,18 @@ li{
         width: 200px;
         height: 200px;
     }
-    section{
+    .main-section{
         padding-left: 25px !important;
     }
-    header{
+    .header{
         position: relative !important;
         height: 80vh;
     }
-    header img{
+    .header .icon{
         width: 40px;
         height: 40px;
     }
-    header h5{
+    .header h5{
         font-size: 23px;
     }
     p{
@@ -256,10 +265,6 @@ li{
         width: 305px;
         height: 80px;
     }
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px){
-    
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px){
