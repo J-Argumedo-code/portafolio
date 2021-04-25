@@ -12,7 +12,12 @@ html::-webkit-scrollbar-thumb {
     border-radius: 10px;
 }
 
-.header{
+main{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.aside{
     height: 100vh;
     transform: translateY(-20%);
     opacity: 0;
@@ -25,7 +30,7 @@ html::-webkit-scrollbar-thumb {
     justify-content: space-evenly;
 }
 
-.header article{
+.aside div{
     text-align: center;
 }
 h1{
@@ -33,7 +38,7 @@ h1{
     font-size: 25px;
     text-align: center;
 }
-.header .icon{
+.aside .icon{
     width: 28px;
     height: 28px;
 }
@@ -42,7 +47,7 @@ h1{
     height: 160px;
     border-radius: 50%;
 }
-.header h5{
+.aside h5{
     margin-top: 10px;
     font-size: 18px;
 }
@@ -106,25 +111,15 @@ p{
 .puntos h6{
     font-size: 24px;
 }
-
-.education{
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    align-items: center;
-}
-.edu{
+.school{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
 }
+
 .img-edu{
     width: 140px;
     height: 140px;
-}
-.edu p{
-    margin-left: 10px;
 }
 
 .idiomas{
@@ -201,7 +196,10 @@ li{
 
 
 
-@media screen and (max-width: 575px){
+@media screen and (max-width: 575.9px){
+    main{
+        flex-direction: column-reverse;
+    }
     .myimg{
         width: 200px;
         height: 200px;
@@ -209,22 +207,19 @@ li{
     .main-section{
         padding-left: 25px !important;
     }
-    .header{
+    .aside{
         position: relative !important;
         height: 80vh;
     }
-    .header .icon{
+    .aside .icon{
         width: 40px;
         height: 40px;
     }
-    .header h5{
+    .aside h5{
         font-size: 23px;
     }
     p{
         font-size: 20px;
-    }
-    .edu{
-        flex-direction: column;
     }
     .tecnologias{
         flex-wrap: wrap;
@@ -241,19 +236,20 @@ li{
     li{
         font-size: 20px;
     }
+    .school{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .school:last-child{
+        padding-top: 30px;
+    }
     .card{
         width: 305px;
         height: 80px;
     }
-    .education{
-        align-items: flex-start;
-    }
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px){
-    .edu{
-        flex-direction: column;
-    }
     .tecnologias{
         flex-wrap: wrap;
     }
@@ -264,6 +260,10 @@ li{
     .card{
         width: 305px;
         height: 80px;
+    }
+    .school{
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 

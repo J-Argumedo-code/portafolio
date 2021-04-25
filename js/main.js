@@ -1,6 +1,6 @@
 window.addEventListener('scroll', function(){
-    let animacion = document.getElementById('imagenes');
-    let posicion = animacion.getBoundingClientRect().top;
+    const animacion = document.getElementById('imagenes');
+    const posicion = animacion.getBoundingClientRect().top;
     let tamañoPantalla = window.innerHeight/1.2
     if(posicion < tamañoPantalla){
         animacion.style.opacity = '100%'
@@ -11,7 +11,7 @@ window.addEventListener('scroll', function(){
     }
 })
 
-let animacion2 = document.querySelector('header');
+const animacion2 = document.querySelector('aside');
 window.onload = animation()
 
 function animation(){
